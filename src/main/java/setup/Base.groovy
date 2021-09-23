@@ -1,12 +1,17 @@
 package setup
 
+import gherkin.lexer.Pa
+import modules.Login
 import geb.Page
 import jxl.Sheet
 import jxl.Workbook
 import jxl.read.biff.BiffException
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
 import org.testng.annotations.Test
 
 class Base extends Page{
+    static Login l;
     public static Map<String, String> data;
     public static int dataIndex = 0;
      static void getTestData(String testName) throws BiffException, IOException, InterruptedException {
@@ -20,5 +25,15 @@ class Base extends Page{
                 data.put(key, value);
             }
         }
+    }
+
+    static content ={
+        manualsMenu { module(Login) }
+
+    }
+      void Logininto()
+    {
+
+        manualsMenu.email.value("cmp")
     }
 }

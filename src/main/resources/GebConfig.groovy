@@ -4,8 +4,5 @@ driver = { new FirefoxDriver() }
 
 baseUrl = "https://portal-dev.my-portal.io/site/register/?user=demo&password=portal"
 reportsDir = "target/geb-reports"
-quitDriverOnBrowserReset = true
-waiting {
-    timeout = 10
-    retryInterval = 0.5
-}
+
+

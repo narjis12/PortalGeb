@@ -8,9 +8,9 @@ class LandingPage extends Page{
     static at = {
         waitFor { title == "Portal DEV Live" }
         assert driver.getCurrentUrl() == "https://portal-dev.my-portal.io/site/register/?user=demo&password=portal"
-       $(".login-logout-navigation .flex-auto").click()
+        $(".login-logout-navigation .flex-auto").click()
         //you can write id, name of the frame
-       // withFrame($("")){testya{$("")}}
+        // withFrame($("")){testya{$("")}}
 
     }
 
@@ -21,11 +21,10 @@ class LandingPage extends Page{
         // submit{$("button.btn")}
         manualsMenu { module(Login) }
     }
-void send()
-{
-pass1.value("cmp")
-
-}
+    void send()
+    {
+        pass1.value("Najju@2017")
 
     }
 
+}
