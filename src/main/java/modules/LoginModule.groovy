@@ -1,14 +1,11 @@
 package modules
-
 import geb.Module
-
 class Login extends Module{
     static content ={
 
 Loginbutton{$(".login-logout-navigation .flex-auto")}
 
         email{$("#login-email")}
-
         password{$("#login-password")}
         submit{$("button.btn")}
         //submit.click()
@@ -19,6 +16,8 @@ Loginbutton{$(".login-logout-navigation .flex-auto")}
     }
      void input()
     {
+
+
         Thread.sleep(4000)
         //Loginbutton.click()
         email.value("cmptest4@nf.cmp-df.net")

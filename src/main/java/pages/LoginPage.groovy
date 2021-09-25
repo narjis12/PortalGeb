@@ -10,14 +10,10 @@ class LoginPage extends Page{
         System.out.println("at")
     }
     static content ={
+        logcre{module(Login)}
 
     }
 
 
-
-     void myna()
-    {
-        System.out.println("asajsja")
-    }
 
 }

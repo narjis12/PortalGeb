@@ -8,6 +8,7 @@ class LandingPage extends Page{
     static at = {
         waitFor { title == "Portal DEV Live" }
         assert driver.getCurrentUrl() == "https://portal-dev.my-portal.io/site/register/?user=demo&password=portal"
+        driver.manage().window().maximize()
         $(".login-logout-navigation .flex-auto").click()
         //you can write id, name of the frame
         // withFrame($("")){testya{$("")}}
