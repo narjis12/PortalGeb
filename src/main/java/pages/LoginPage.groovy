@@ -5,14 +5,19 @@ import modules.Login
 
 
 class LoginPage extends Page{
-   public static String a="bjb";
-    static at={
-        System.out.println("at")
+    static at ={
+        waitFor { title == "Portal DEV Live" }
+        driver.manage().window().maximize()
+        $(".login-logout-navigation .flex-auto").click()
     }
+
+
     static content ={
-        logcre{module(Login)}
+        logincredentials{module(Login)}
 
     }
+
+
 
 
 

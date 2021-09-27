@@ -6,10 +6,12 @@ import org.openqa.selenium.By
 class LandingPage extends Page{
 
     static at = {
-        waitFor { title == "Portal DEV Live" }
-        assert driver.getCurrentUrl() == "https://portal-dev.my-portal.io/site/register/?user=demo&password=portal"
-        driver.manage().window().maximize()
-        $(".login-logout-navigation .flex-auto").click()
+        waitFor {$(".button .flex > .feather-x")}
+        $(".button .flex > .feather-x").click()
+       // waitFor { title == "Portal DEV Live" }
+        //assert driver.getCurrentUrl() == "https://portal-dev.my-portal.io/site/register/?user=demo&password=portal"
+       // driver.manage().window().maximize()
+        //$(".login-logout-navigation .flex-auto").click()
         //you can write id, name of the frame
         // withFrame($("")){testya{$("")}}
 

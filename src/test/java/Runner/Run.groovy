@@ -51,7 +51,7 @@ class Run extends GebReportingSpec{
         println(uploadedFile.absolutePath)
         $(".button .flex > .feather-x").click()
         waitFor {$(".input--textarea")}
-//$("input[type=file][name='wallPostImageUpload']")<<"C:\\Users\\Narjis Fathima\\IdeaProjects\\PortalGeb\\src\\main\\resources\\sebastian-knoll-sdqNXWlvkDY-unsplash.jpg"
+$("input[type=file][name='wallPostImageUpload']")<<"C:\\Users\\Narjis Fathima\\IdeaProjects\\PortalGeb\\src\\main\\resources\\sebastian-knoll-sdqNXWlvkDY-unsplash.jpg"
 
         Thread.sleep(3000)
 
