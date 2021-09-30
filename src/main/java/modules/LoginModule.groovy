@@ -1,7 +1,6 @@
 package modules
 import geb.Module
 import org.openqa.selenium.Keys
-
 class Login extends Module{
     static content ={
         Loginbutton{$(".login-logout-navigation .flex-auto")}
@@ -10,7 +9,6 @@ class Login extends Module{
         submit{$("button.btn")}
         demo{$("input#show-user")}
         pwd{$("input#show-password")}
-
     }
      void loginwindow()
     {

@@ -1,9 +1,5 @@
 package Runner
-
 import geb.spock.GebReportingSpec
-import io.cucumber.java.en.Given
-import org.junit.BeforeClass
-import org.openqa.selenium.By
 import org.testng.annotations.BeforeTest
 import org.testng.annotations.Test
 import pages.FeedPage

@@ -6,15 +6,10 @@ import geb.Page
 import jxl.Sheet
 import jxl.Workbook
 import jxl.read.biff.BiffException
-import org.openqa.selenium.By
-import org.openqa.selenium.WebDriver
-import org.testng.annotations.Test
-
 class Base extends Page {
     static Login l
     public static Map<String, String> data
     public static int dataIndex = 0
-
     static void getTestData(String testName) throws BiffException, IOException, InterruptedException {
         data = new HashMap<String, String>()
         Sheet dataSheet = Workbook.getWorkbook(new File(("src/main/resources/TestData.xls"))).getSheet("testsheet")
