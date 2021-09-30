@@ -5,6 +5,7 @@ import org.testng.annotations.Test
 import pages.FeedPage
 import pages.LandingPage
 import pages.LoginPage
+import modules.CreateWallpostModule
 
 class wallcount extends GebReportingSpec{
     @BeforeTest
@@ -23,19 +24,14 @@ class wallcount extends GebReportingSpec{
                     }
         }
     }
-
-
-
     @Test
-
     def "counting"()
     {
-
-
         given:
         to LandingPage
         and:
         to FeedPage
-        value()
+       int beforecount = createWallpost.createwallpost()
+        createWallpost.submitWallpost(beforecount)
     }
 }

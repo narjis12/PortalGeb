@@ -17,7 +17,6 @@ class Login extends Module{
         password.value("Najju@2017")
         submit.click()
     }
-
     void demowindow()
     {
         demo.value("demo")
