@@ -5,8 +5,7 @@
       <parameter name="config" value="browserstack.conf.json"/>
       <parameter name="environment" value="chrome"/>
       <classes>
-
-          <class name="Runner.Run"/>
+          <class name="Runner.UploadImage"/>
      
       </classes>
       </test>

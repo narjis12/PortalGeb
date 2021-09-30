@@ -10,30 +10,21 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.testng.annotations.Test
 
-class Base extends Page{
-    static Login l;
-    public static Map<String, String> data;
-    public static int dataIndex = 0;
-     static void getTestData(String testName) throws BiffException, IOException, InterruptedException {
-        data = new HashMap<String, String>();
-        Sheet dataSheet = Workbook.getWorkbook(new File(("src/main/resources/TestData.xls"))).getSheet("testsheet");
-        dataIndex = dataSheet.findCell(testName).getRow();
+class Base extends Page {
+    static Login l
+    public static Map<String, String> data
+    public static int dataIndex = 0
+
+    static void getTestData(String testName) throws BiffException, IOException, InterruptedException {
+        data = new HashMap<String, String>()
+        Sheet dataSheet = Workbook.getWorkbook(new File(("src/main/resources/TestData.xls"))).getSheet("testsheet")
+        dataIndex = dataSheet.findCell(testName).getRow()
         for (int i = 1; i < dataSheet.getColumns(); i++) {
             for (int j = dataIndex - 1; j < dataSheet.getRows(); j++) {
-                String key = dataSheet.getCell(i, j).getContents();
-                String value = dataSheet.getCell(i, dataIndex).getContents();
-                data.put(key, value);
+                String key = dataSheet.getCell(i, j).getContents()
+                String value = dataSheet.getCell(i, dataIndex).getContents()
+                data.put(key, value)
             }
         }
-    }
-
-    static content ={
-        manualsMenu { module(Login) }
-
-    }
-      void Logininto()
-    {
-
-        manualsMenu.email.value("cmp")
     }
 }

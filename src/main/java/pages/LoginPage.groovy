@@ -10,15 +10,8 @@ class LoginPage extends Page{
         driver.manage().window().maximize()
         $(".login-logout-navigation .flex-auto").click()
     }
-
-
     static content ={
         logincredentials{module(Login)}
 
     }
-
-
-
-
-
 }

@@ -1,11 +1,16 @@
 package Runner
+
 import geb.spock.GebReportingSpec
+import io.cucumber.java.en.Given
+import org.junit.BeforeClass
+import org.openqa.selenium.By
 import org.testng.annotations.BeforeTest
 import org.testng.annotations.Test
+import pages.FeedPage
 import pages.LandingPage
 import pages.LoginPage
 
-class UploadImage extends GebReportingSpec{
+class wallcount extends GebReportingSpec{
     @BeforeTest
     def "Login Setup"() {
         given:
@@ -23,20 +28,18 @@ class UploadImage extends GebReportingSpec{
         }
     }
 
-    @Test
-    def "Upload image in wallpost"()
-    {
-        given: "user is on Landing page"
-        to LandingPage
-        System.out.println("in landing page")
-        and: "user saves image in file"
-        File uploadedFile= new File("src/main/resources/sebastian-knoll-sdqNXWlvkDY-unsplash.jpg")
-        println(uploadedFile.absolutePath)
-        //close setup window
-        expect: "user uploads the image"
-        waitFor {$(".input--textarea")}
-        $("input[type=file][name='wallPostImageUpload']")<<"C:\\Users\\Narjis Fathima\\IdeaProjects\\PortalGeb\\src\\main\\resources\\sebastian-knoll-sdqNXWlvkDY-unsplash.jpg"
-        Thread.sleep(3000)
 
+
+    @Test
+
+    def "counting"()
+    {
+
+
+        given:
+        to LandingPage
+        and:
+        to FeedPage
+        value()
     }
 }

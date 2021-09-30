@@ -8,8 +8,8 @@ class Login extends Module{
         email{$("#login-email")}
         password{$("#login-password")}
         submit{$("button.btn")}
-        demo{$("#show-user")}
-        pwd{$("#show-password")}
+        demo{$("input#show-user")}
+        pwd{$("input#show-password")}
 
     }
      void loginwindow()
