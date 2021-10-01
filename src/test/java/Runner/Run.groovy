@@ -58,6 +58,10 @@ $("input[type=file][name='wallPostImageUpload']")<<"C:\\Users\\Narjis Fathima\\I
         JavascriptExecutor js = (JavascriptExecutor)driver
         js.executeScript("window.scrollBy(0,1000)")
         Thread.sleep(3000)
+        // pass additonal arguments in the url
+        //to LandingPage, "0.93", "index.html"
+        //assert currentUrl= "Lanidngpageurl/0.93/index.html"
+
         /*
         WebElement fileElement=driver.findElement(By.xpath("//*[@id='imageControl']"));
         fileElement .click();

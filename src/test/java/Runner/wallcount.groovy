@@ -5,8 +5,6 @@ import org.testng.annotations.Test
 import pages.FeedPage
 import pages.LandingPage
 import pages.LoginPage
-import modules.CreateWallpostModule
-
 class wallcount extends GebReportingSpec{
     @BeforeTest
     def "Login Setup"() {

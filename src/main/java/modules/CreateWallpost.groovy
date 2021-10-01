@@ -8,7 +8,6 @@ class CreateWallpostModule extends Module{
         submitbutton{$(".button-primary > .flex-row-reverse > .flex-auto")}
         Totalcount{$("div[role='listitem']")}
     }
-
     int createwallpost()
     {
         int beforewallpostCount = Totalcount.size()
