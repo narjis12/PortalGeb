@@ -17,6 +17,7 @@ class FeedPage extends Page{
         wallcountsize {
             (driver.findElements(By.xpath("//div[@id='app']/div[1]/div[1]/section/div[2]/div/section/div/div/section/div/div[3]/div[1]/div")))
         }
+        //halo{$(By.id(""))}
         createWallpost{module(CreateWallpostModule)}
     }
 
@@ -26,6 +27,7 @@ class FeedPage extends Page{
 
         //System.out.println("totalcount"+ wallcountsize.size())
         //driver.findElement(postarea).sendKeys("hallo")
+        //$(By.id(""))
 
     }
 }

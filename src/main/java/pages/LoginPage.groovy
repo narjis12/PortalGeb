@@ -2,6 +2,7 @@ package pages
 
 import geb.Page
 import modules.Login
+import org.openqa.selenium.By
 
 
 class LoginPage extends Page{
@@ -12,6 +13,8 @@ class LoginPage extends Page{
     }
     static content ={
         logincredentials{module(Login)}
+        //asaa{$(By.id(""))}
 
     }
+
 }

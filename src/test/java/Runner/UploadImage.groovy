@@ -1,5 +1,8 @@
 package Runner
+
+import geb.module.TextInput
 import geb.spock.GebReportingSpec
+import org.openqa.selenium.Keys
 import org.testng.annotations.BeforeTest
 import org.testng.annotations.Test
 import pages.LandingPage
@@ -37,6 +40,7 @@ class UploadImage extends GebReportingSpec{
         waitFor {$(".input--textarea")}
         $("input[type=file][name='wallPostImageUpload']")<<"C:\\Users\\Narjis Fathima\\IdeaProjects\\PortalGeb\\src\\main\\resources\\sebastian-knoll-sdqNXWlvkDY-unsplash.jpg"
         Thread.sleep(3000)
+        //$("input[type=file][name='wallPostImageUpload']")<< Keys.chord(Keys.CONTROL, "c")
 
     }
 }

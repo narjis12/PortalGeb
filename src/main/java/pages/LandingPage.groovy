@@ -2,6 +2,7 @@ package pages
 import geb.Page
 import modules.Login
 import org.openqa.selenium.By
+import modules.CreateWallpostModule
 
 class LandingPage extends Page{
 
@@ -23,6 +24,7 @@ class LandingPage extends Page{
         // password{$("#login-password")}
         // submit{$("button.btn")}
         manualsMenu { module(Login) }
+
     }
     void send()
     {

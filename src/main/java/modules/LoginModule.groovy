@@ -9,6 +9,9 @@ class Login extends Module{
         submit{$("button.btn")}
         demo{$("input#show-user")}
         pwd{$("input#show-password")}
+        //def checkbox = $(name: "flag")
+       // checkbox[0].click()
+
     }
      void loginwindow()
     {
@@ -16,6 +19,7 @@ class Login extends Module{
         email.value("cmptest4@nf.cmp-df.net")
         password.value("Najju@2017")
         submit.click()
+        //checkbox.check()
     }
     void demowindow()
     {
