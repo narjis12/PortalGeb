@@ -1,6 +1,7 @@
 package pages
 import geb.Page
 import modules.Login
+import pages.FeedPage
 import org.openqa.selenium.By
 import modules.CreateWallpostModule
 

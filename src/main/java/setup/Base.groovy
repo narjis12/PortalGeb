@@ -6,7 +6,11 @@ import geb.Page
 import jxl.Sheet
 import jxl.Workbook
 import jxl.read.biff.BiffException
-class Base extends Page {
+import org.openqa.selenium.By
+import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.support.ui.WebDriverWait
+
+class Base extends Page{
     static Login l
     public static Map<String, String> data
     public static int dataIndex = 0
@@ -21,5 +25,14 @@ class Base extends Page {
                 data.put(key, value)
             }
         }
+    }
+
+    public void waitForCssElementsNumberToGrow(int css, int numberOfElements) {
+        new WebDriverWait(driver, 30).until(ExpectedConditions.numberOfElementsToBeMoreThan(css, numberOfElements));
+    }
+
+    static void haloprin()
+    {
+        System.out.println("jajsjasj")
     }
 }

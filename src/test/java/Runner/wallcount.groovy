@@ -5,6 +5,7 @@ import org.testng.annotations.Test
 import pages.FeedPage
 import pages.LandingPage
 import pages.LoginPage
+import modules.CreateWallpostModule
 class wallcount extends GebReportingSpec{
     @BeforeTest
     def "Login Setup"() {
@@ -12,7 +13,7 @@ class wallcount extends GebReportingSpec{
         to LoginPage
         and:
         System.out.println("in login page")
-        waitFor(10) {
+        waitFor(5) {
             withWindow({ $(".header__title").text() == "Log In" })
                     {
                         System.out.println("inside window page")
@@ -28,8 +29,8 @@ class wallcount extends GebReportingSpec{
         given:
         to LandingPage
         and:
-        to FeedPage
-       int beforecount = createWallpost.createwallpost()
+        page(FeedPage)
+        int beforecount = createWallpost.createwallpost()
         createWallpost.submitWallpost(beforecount)
     }
 }
