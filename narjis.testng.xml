@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Suite" parallel="tests" allow-return-values="true">
+<suite name="Suite"  allow-return-values="true">
   <test name="Wallpost" allow-return-values="true">
-      <parameter name="config" value="browserstack.conf.json"/>
-      <parameter name="environment" value="chrome"/>
       <classes>
           <class name="Runner.UploadImage"/>
-     
+          <class name="Runner.wallcount"/>
       </classes>
       </test>
       </suite>

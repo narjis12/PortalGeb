@@ -9,9 +9,11 @@ class LoginPage extends Page{
     static at ={
         waitFor { title == "Portal DEV Live" }
         driver.manage().window().maximize()
-        $(".login-logout-navigation .flex-auto").click()
+        waitFor {  $(".login-logout-navigation .flex-auto")}
+
     }
     static content ={
+        Loginbuttonclick{$(".login-logout-navigation .flex-auto")}
         logincredentials{module(Login)}
         //asaa{$(By.id(""))}
 

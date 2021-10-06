@@ -7,8 +7,8 @@ class Login extends Module{
         email{$("#login-email")}
         password{$("#login-password")}
         submit{$("button.btn")}
-        demo{$("input#show-user")}
-        pwd{$("input#show-password")}
+        demo{$("input#show-user.form-control")}
+        pwd{$("input#show-password.form-control")}
         //def checkbox = $(name: "flag")
        // checkbox[0].click()
 

@@ -1,19 +1,10 @@
 package Runner
 import geb.spock.GebReportingSpec
 import org.junit.BeforeClass
-import org.openqa.selenium.By
 import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.Keys
-import org.openqa.selenium.WebElement
-import org.testng.annotations.BeforeTest
 import org.testng.annotations.Test
-import pages.LandingPage
-import pages.LoginPage
 
-import java.awt.Robot
-import java.awt.Toolkit
-import java.awt.datatransfer.StringSelection
-import java.awt.event.KeyEvent
 
 class Run extends GebReportingSpec{
 

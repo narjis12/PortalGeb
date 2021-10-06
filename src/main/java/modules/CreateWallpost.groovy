@@ -1,5 +1,6 @@
 package modules
 import geb.Module
+
 class CreateWallpostModule extends Module{
     static content ={
         wallpostArea{$(".input--textarea")}
@@ -17,7 +18,7 @@ class CreateWallpostModule extends Module{
     void submitWallpost(int beforecount)
     {
         submitbutton.click()
-        waitFor(5) {beforecount++}
+        //waitFor(5) {beforecount++}
         int x = Totalcount.size()
        // Assert.assertNotEquals(beforecount, x)
         System.out.println("count after creating wallpost"+ x)
